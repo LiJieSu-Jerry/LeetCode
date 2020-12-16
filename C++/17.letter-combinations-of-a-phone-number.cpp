@@ -38,18 +38,20 @@ public:
                     return n8;
                 case 9:
                     return n9;
+                default:
+                    return "";
             }
     }
     void combine(string nowCombine,vector<string> &ans,string digits){
-        if(nowCombine.length()>digits.length()){
+        if(nowCombine.length()>=digits.length()){
             ans.push_back(nowCombine);
             return;
         }
         string s=dtos(digits[nowCombine.length()]);
         for(int i=0;i<s.length();i++){
-            nowCombine+=s[i];
-            cout<<nowCombine<<endl;
-            combine(nowCombine,ans,digits);
+            string tempAns=nowCombine;
+            tempAns+=s[i];
+            combine(tempAns,ans,digits);
         }
         return;
     }
@@ -60,12 +62,13 @@ public:
         return ans;
     }
 };
-int main(){
+/*int main(){
     Solution s;
-    cout<<s.dtos('5');
-    /*for(string s:s.letterCombinations("23")){
-        cout<<s<<endl;
-    }*/
-}
+    //cout<<s.dtos('2');
+    
+    for(string s:s.letterCombinations("6")){
+        cout<<s<<" ";
+    }
+}*/
 // @lc code=end
 
