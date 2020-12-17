@@ -1,14 +1,21 @@
 #include<iostream>
 #include<vector>
 #include <map>
+#include <bitset>
 using namespace std;
-
+struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode() : val(0), next(nullptr) {}
+      ListNode(int x) : val(x), next(nullptr) {}
+      ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
 int main(){
-    vector<int> a={1,2};
-    map<int,int> t;
-    t.insert(pair<int,int>(1,5));
-    t.insert(pair<int,int>(2,6));
+    int a;
+    string s;
 
-    cout<<t[a.back()]<<endl;
-    return 0;
+    bitset<10> b(011);
+    cout<<b[0]<<endl;
+
+
 }
