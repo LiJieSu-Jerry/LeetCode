@@ -2,6 +2,7 @@
 #include<vector>
 #include <map>
 #include <bitset>
+
 using namespace std;
 struct ListNode {
       int val;
@@ -10,12 +11,21 @@ struct ListNode {
       ListNode(int x) : val(x), next(nullptr) {}
       ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
+    void swap(int &a,int &b){
+        int temp;
+        temp=a;
+        a=b;
+        b=temp;
+    }
+    void reverse(vector<int> &nums, ){
+        for(int i=0;i<nums.size()/2;i++){
+            swap(nums[i],nums[nums.size()-i-1]);
+        }
+    }
 int main(){
-    int a;
+    int a=3;
     string s;
-
-    bitset<10> b(011);
-    cout<<b[0]<<endl;
+    cout<<3/2<<endl;
 
 
 }
